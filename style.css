@@ -1,0 +1,273 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position:fixed;
+    color: #ffffff;
+}
+a {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+/*шапка*/
+header{
+    background-color: #4875c6;
+    height: 56px;
+}
+.trigrama{
+    display: none;
+}
+.logo {
+    float: left;
+    padding-left:16px;
+    padding-top: 20px;
+}
+.menu {
+    float: left;
+    margin-left: 100px;
+}
+.user {
+    float: right;
+    padding-right: 5px;
+}
+
+.menu ul,
+.user ul{
+    padding: 0;
+    list-style: none;
+    margin-top: 15px;
+}
+.menu li{
+    display: inline;
+}
+.user li{
+    display: inline-block;
+}
+
+.menu a{
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    text-transform:uppercase;
+    font-size: 14px;
+    cursor: pointer;
+}
+.user a{
+ padding: 5px;
+}
+.valign-center {
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+}
+.user img {
+    width: 27px;
+    height: auto;
+}
+
+/*стилизация формы */
+.search_input {
+    position: absolute;
+    padding-left: 5px;
+    top: 10px;
+    left: 300px;
+    width: 650px;
+    color: black;
+    background-color: white;
+    border-radius: 2px;
+    transform: scale(0);
+    transform-origin:right center;
+}
+.md-lightgrey{
+    color: #c1c1c1;
+}
+.md-grey{
+    color: #444f62;
+}
+.button-search{
+    float: right;
+    width: 12%;
+    height: 40px;
+    border: none;
+    color: white;
+    border-radius: 0 3px 3px 0;
+    background-color: #ffc120;
+}
+.search_expanding{
+    position: absolute;
+    top: 44px;
+    padding: 20px;
+    width: 400px;
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+.search_input #search {
+    width: 75%;
+    border: none;
+    padding: 10px;
+}
+.search_expanding .autor {
+    padding: 10px;
+    width: 75%;
+    border-radius: 3px;
+    border: 1px solid #c1c1c1;
+ }
+.hidden-item{
+    display: none;
+}
+.checkbox span{
+    padding-left: 10px;
+    margin-right: 10px;
+    vertical-align: center;
+}
+.checkbox i{
+    display: inline-block;
+    padding: 0;
+    margin-top: 2px;
+    margin-bottom: -3px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #c1c1c1;
+    border-radius: 2px;
+    position: relative;
+}
+.checkbox i:before {
+    content: '\2714';
+    font-size: 11px;
+    color: white;
+    position: absolute;
+    top: -1px; bottom: -1px;
+    left: -1px;right: -1px;
+    background: #8fc04f;
+    border: 2px solid #8fc04f;
+    border-radius: 2px;
+    transform: scale(0);
+    transition: .3s;
+}
+.checkbox input:checked+i:before{
+    transform: scale(1);
+}
+.text_position {
+    vertical-align: center;
+    padding-top: 20px;
+    display: inline-block;
+    height: 38px;
+}
+.form_select {
+    float: right;
+    left:-120px;
+    width:140px;
+    height: 38px;
+    padding-left: 5px;
+    background-color: #f2f2f2;
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid #c1c1c1;
+    margin-top: 10px;
+}
+.form_select:after {
+    content: '';
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #000 transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    pointer-events: none;
+    right: 10px;
+    z-index: 1;
+    margin-top: -2px;
+}
+.form_select select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height:100%;
+    top:-100px;
+    background: none;
+    font-size: 14px;
+    border: none;
+}
+.form_select select:focus{
+    cursor: pointer;
+}
+is_active{
+   display: block;
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1920px) {
+
+}
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+    .logo {
+        height: 0.8rem;
+    }
+    .menu{
+        margin-left: 20px;
+    }
+    .menu a{
+        font-size: 11px;
+        margin-right: 5px;
+    }
+    .search_input{
+        left: 225px;
+        width: 520px;
+    }
+    .search_input #search{
+        width: 70%;
+    }
+}
+@media screen and (min-width: 414px) and (max-width: 1023px) {
+    header {
+        height: 96px;
+    }
+    .trigrama{
+        display: inline-block;
+        float: left;
+        padding-left:16px;
+        padding-right: 16px;
+        padding-top: 20px;
+    }
+    .logo{
+        float: none;
+    }
+    .menu .hover{
+        display: none;
+    }
+    .user {
+        float: none;
+        position: relative;
+        left: -50px;
+    }
+    .user ul{
+        margin-top:0;
+        margin-left: 0;
+    }
+    .user li{
+        padding-right: 12%;
+
+    }
+    .search_button{
+      position: absolute;
+      right: 10px;
+      top:16px;
+    }
+    .search_input {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 5;
+        width: 450px;
+        padding: 0;
+        margin: 0;
+    }
+    .search_input #search{
+        width: 65%;
+    }
+}
