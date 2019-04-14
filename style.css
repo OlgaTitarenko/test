@@ -83,6 +83,8 @@ header{
     border-radius: 2px;
     transform: scale(0);
     transform-origin:right center;
+    transition: transform .3s;
+
 }
 .md-lightgrey{
     color: #c1c1c1;
